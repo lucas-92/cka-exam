@@ -1,12 +1,12 @@
 # Ativar o autocomplete do kubectl
 
-## echo 'source <(kubectl completion bash)' >>~/.bashrc
+- echo 'source <(kubectl completion bash)' >>~/.bashrc
 *Ativa o autocomplete do kubectl*
 
-## source .bashrc
+- source .bashrc
 *Carrega o bash config que acabamos de criar*
 
-## kubectl 
+- kubectl 
 *Verifica se o autocomplete está funcionando*
 
 # Identações do vim
