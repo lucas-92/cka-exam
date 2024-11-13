@@ -11,17 +11,13 @@
 
 # Identações do vim
 
-## vim .vimrc
-*Cria o arquivo .vimrc dentro da home do usuário para configurar o vim* 
+- vim .vimrc *Cria o arquivo .vimrc dentro da home do usuário para configurar o vim* 
 
-## set expandtab
-*Usa o tab como espaço*
+- set expandtab *Usa o tab como espaço*
 
-## set tabstop=2
-*Define 2 espaços para cada tab*
+- set tabstop=2 *Define 2 espaços para cada tab*
 
-## set shiftwidth=2
-*Define como 2 o espaço mantidos para baixo a cada identação*
+- set shiftwidth=2 *Define como 2 o espaço mantidos para baixo a cada identação*
 
 # Alias do kubectl
 
