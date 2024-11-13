@@ -38,3 +38,4 @@
 # Variável de ambiente para dry run
 
 ## export drun="--dry-run=client -o yaml"
+*Usar variável com $drun*
