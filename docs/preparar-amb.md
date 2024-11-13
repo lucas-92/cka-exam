@@ -1,13 +1,10 @@
 # Ativar o autocomplete do kubectl
 
-- echo 'source <(kubectl completion bash)' >>~/.bashrc
-*Ativa o autocomplete do kubectl*
+- echo 'source <(kubectl completion bash)' >>~/.bashrc *Ativa o autocomplete do kubectl*
 
-- source .bashrc
-*Carrega o bash config que acabamos de criar*
+- source .bashrc *Carrega o bash config que acabamos de criar*
 
-- kubectl 
-*Verifica se o autocomplete está funcionando*
+- kubectl *Verifica se o autocomplete está funcionando*
 
 # Identações do vim
 
@@ -21,17 +18,16 @@
 
 # Alias do kubectl
 
-## vim .bashrc
+- vim .bashrc
 
-## alias k=kubectl
+- alias k=kubectl
 
-## complete -F __start_kubectl k
+- complete -F __start_kubectl k
 
-## alias kgd='kubectl get pod'
+- alias kgd='kubectl get pod'
 
-## alias kd='kubectl describe'
+- alias kd='kubectl describe'
 
 # Variável de ambiente para dry run
 
-## export drun="--dry-run=client -o yaml"
-*Usar variável com $drun*
+- export drun="--dry-run=client -o yaml" *Usar variável com $drun*
