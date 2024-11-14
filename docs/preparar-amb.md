@@ -23,7 +23,7 @@
 
 - export drun="--dry-run=client -o yaml"
 
-## Explicações
+# Explicações
 
 - echo 'source <(kubectl completion bash)' >>~/.bashrc *Ativa o autocomplete do kubectl*
 
