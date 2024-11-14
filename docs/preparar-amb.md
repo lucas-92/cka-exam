@@ -16,7 +16,7 @@
 - vim .bashrc
 - alias k=kubectl
 - complete -F __start_kubectl k
-- alias kgd='kubectl get pod'
+- alias kgp='kubectl get pod'
 - alias kd='kubectl describe'
 
 # Variável de ambiente para dry run
