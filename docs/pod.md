@@ -29,3 +29,10 @@ k explain pod
 ```
 k explain pod --recursive
 ```
+```
+k explain pod.spec --recursive
+```
+
+```
+k run nginx --image nginx --env teste=true --port 80 --dry-run=client -o yaml
+```
