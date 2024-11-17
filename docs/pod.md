@@ -36,3 +36,19 @@ k explain pod.spec --recursive
 ```
 k run nginx --image nginx --env teste=true --port 80 --dry-run=client -o yaml
 ```
+
+```
+k replace -f pod.yaml --force
+```
+
+```
+k exec -it pods/meu-pod -- env
+```
+
+```
+k run sleep --image busybox -o yaml --dry-run=client -- sleep 1000 > sleep.yaml
+```
+
+```
+ k replace -f sleep.yaml --force --grace-period 0
+```
