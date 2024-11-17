@@ -26,3 +26,6 @@ k describe pod meu-pod
 ```
 k explain pod
 ```
+```
+k explain pod --recursive
+```
