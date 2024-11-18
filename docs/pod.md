@@ -46,6 +46,10 @@ k describe pod meu-pod | grep Image
 ```
 
 ```
+k get pod meu-pod -o yaml > pod.yaml
+```
+
+```
 k replace -f pod.yaml --force
 ```
 
