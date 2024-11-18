@@ -38,6 +38,14 @@ k run nginx --image nginx --env teste=true --port 80 --dry-run=client -o yaml
 ```
 
 ```
+k edit pod meu-pod
+```
+
+```
+k describe pod meu-pod | grep Image
+```
+
+```
 k replace -f pod.yaml --force
 ```
 
