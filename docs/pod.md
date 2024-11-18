@@ -1,5 +1,4 @@
-# Criar Pod
-
+# Crie um pod nginx simples
 ```
 vim pod.yaml
 ```
