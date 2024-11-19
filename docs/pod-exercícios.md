@@ -70,10 +70,6 @@ Tarefas:
     Reaplique as alterações usando k replace --force.
     Liste o pod e verifique as mudanças no YAML.
 
-You said:
-Pode criar exercícios mais difíceis levando em consideração o mesmos comandos?
-ChatGPT said:
-ChatGPT
 Exercícios Avançados sobre Comandos Kubernetes
 1. Manipulação de Pods e Debugging
 
