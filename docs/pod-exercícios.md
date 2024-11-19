@@ -1,4 +1,5 @@
-1. Criação e Manipulação de Pods
+# Exercícios Simples sobre Comandos Kubernetes
+## 1. Criação e Manipulação de Pods
 
 Enunciado:
 
@@ -13,7 +14,7 @@ Tarefas:
     Liste os pods existentes no cluster.
     Descreva o pod meu-pod para verificar se ele foi criado corretamente.
 
-2. Explicação e Estrutura de Pods
+## 2. Explicação e Estrutura de Pods
 
 Enunciado:
 
@@ -25,7 +26,7 @@ Tarefas:
     Liste todos os campos disponíveis de forma recursiva para um Pod.
     Faça o mesmo para a seção spec do recurso Pod.
 
-3. Execução e Alteração de Configurações
+## 3. Execução e Alteração de Configurações
 
 Enunciado:
 
@@ -41,7 +42,7 @@ Tarefas:
     Reaplique o manifesto com k replace.
     Extraia o YAML novamente, altere a variável para mais rápido e reaplique.
 
-4. Depuração e Comandos Interativos
+## 4. Depuração e Comandos Interativos
 
 Enunciado:
 
@@ -55,7 +56,7 @@ Tarefas:
     Dentro do contêiner, use o curl para testar a conectividade com localhost:80.
     Tente acessar o Redis na porta padrão (6379) com curl.
 
-5. Forçar Substituições e Recriação de Pods
+## 5. Forçar Substituições e Recriação de Pods
 
 Enunciado:
 
@@ -70,8 +71,8 @@ Tarefas:
     Reaplique as alterações usando k replace --force.
     Liste o pod e verifique as mudanças no YAML.
 
-Exercícios Avançados sobre Comandos Kubernetes
-1. Manipulação de Pods e Debugging
+# Exercícios Avançados sobre Comandos Kubernetes
+## 1. Manipulação de Pods e Debugging
 
 Enunciado:
 Crie um pod chamado nginx-debug com a imagem nginx, configure a porta 80 e adicione uma variável de ambiente chamada DEBUG com valor true. Realize as seguintes operações de depuração no pod:
@@ -87,7 +88,7 @@ Tarefas:
     Edite o pod para simular o erro e descreva o estado do pod.
     Extraia o YAML, corrija a configuração e aplique as mudanças para restaurar o pod.
 
-2. Testando Alterações no Ambiente de Pods
+## 2. Testando Alterações no Ambiente de Pods
 
 Enunciado:
 Implemente um pod chamado sleep-test com a imagem busybox que execute o comando sleep 1000. Inicialmente, inclua a variável de ambiente MODE=dev. Após a criação, altere essa variável para MODE=prod usando os comandos disponíveis.
@@ -100,7 +101,7 @@ Tarefas:
     Reaplique o YAML usando k replace e verifique as mudanças.
     Confirme a nova configuração diretamente dentro do contêiner, usando k exec e o comando env.
 
-3. Validando Políticas e Recriação de Recursos
+## 3. Validando Políticas e Recriação de Recursos
 
 Enunciado:
 Configure um pod chamado meu-nginx com a imagem nginx e exporte o YAML. Aplique uma política de segurança fictícia que exige que todos os pods tenham variáveis de ambiente chamadas SECURE=true.
@@ -113,7 +114,7 @@ Tarefas:
     Use k exec para verificar se a variável está presente no ambiente do contêiner.
     Gere um novo YAML que falhe na política e descreva o erro usando k describe pod.
 
-4. Automação e Comparação de Configurações
+## 4. Automação e Comparação de Configurações
 
 Enunciado:
 Automatize a criação e modificação de pods com scripts. Use os comandos para criar dois pods (nginx1 e nginx2) e compare suas configurações YAML. Após isso, force ambos os pods a serem recriados com mudanças idênticas.
@@ -126,7 +127,7 @@ Tarefas:
     Reaplique as configurações alteradas com k replace.
     Liste os pods e verifique as mudanças.
 
-5. Simulação de Ciclo de Vida de Aplicações
+## 5. Simulação de Ciclo de Vida de Aplicações
 
 Enunciado:
 Simule o ciclo de vida de uma aplicação usando o pod nginx:
