@@ -1,0 +1,56 @@
+As diferenças entre os dois comandos estão nos argumentos passados ao pod e como eles afetam o comportamento esperado. Vamos analisá-los:
+Comando 1:
+
+kubectl run command --image=nginx --command --dry-run=client -o yaml -- env
+
+Detalhes:
+
+    --command:
+        Especifica que o comando passado substitui o ENTRYPOINT ou CMD da imagem.
+        Aqui, o comando é env.
+
+    -- env:
+        O argumento env é interpretado como o comando a ser executado.
+        O env é um utilitário padrão em sistemas Unix que lista todas as variáveis de ambiente no momento da execução.
+
+    Resultado:
+        O pod gerado terá env como o comando principal a ser executado. O contêiner será inicializado, e o comando env exibirá as variáveis de ambiente configuradas.
+
+Comando 2:
+
+kubectl run command --image=nginx --command --dry-run=client -o yaml -- /bin/sh -c env
+
+Detalhes:
+
+    --command:
+        Mesma funcionalidade do comando anterior.
+
+    -- /bin/sh -c env:
+        Aqui, o comando executado é uma combinação de /bin/sh -c env.
+        /bin/sh -c: Inicia um shell no contêiner e passa o comando env para ele.
+        O env será executado no contexto desse shell.
+
+    Resultado:
+        O pod gerado executará um shell (/bin/sh), e este executará o comando env dentro do shell.
+
+Diferenças Principais:
+
+    Forma de execução:
+        No primeiro comando, o binário env é chamado diretamente pelo Kubernetes.
+        No segundo comando, o binário env é chamado pelo shell (/bin/sh).
+
+    Dependência do shell:
+        O primeiro comando não depende de um shell para executar.
+        O segundo comando explicitamente cria um processo de shell, que depois invoca o comando env.
+
+    Sobrecarga:
+        O segundo comando tem uma leve sobrecarga por iniciar um shell adicional antes de executar env.
+
+    Complexidade potencial:
+        O segundo comando permite executar comandos mais complexos, como pipelines ou sequências, devido ao uso do shell (/bin/sh -c).
+        No primeiro comando, você está restrito ao utilitário env diretamente.
+
+Quando usar cada um:
+
+    Use o primeiro comando para simplicidade e menor sobrecarga se você só precisa executar um único comando simples.
+    Use o segundo comando quando precisar de mais flexibilidade, como combinar comandos ou manipular saída com o shell.
