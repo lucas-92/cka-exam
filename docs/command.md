@@ -20,7 +20,7 @@ apt update
 
 apt install procps
 
-psaux
+ps aux
 
 k run command --image=nginx --dry-run=client -o yaml > command.yaml
 
@@ -34,5 +34,5 @@ apt update
 
 apt install procps
 
-psaux
+ps aux
 
