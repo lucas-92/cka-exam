@@ -1,16 +1,9 @@
-Exercício 1: Criando e sobrescrevendo o entrypoint
+# Exercício 1: Criando e sobrescrevendo o entrypoint
 
-    Crie um pod imperativamente que execute o comando env para listar as variáveis de ambiente no contêiner.
-    Use o seguinte comando:
+Crie um pod imperativamente que execute o comando env para listar as variáveis de ambiente no contêiner.
 
 kubectl run command --image=nginx --command --dry-run=client -o yaml -- /bin/sh -c env > command.yaml
-
-Aplique o manifesto gerado para criar o pod:
-
 kubectl apply -f command.yaml
-
-Liste os pods criados e visualize os logs para verificar o resultado do comando:
-
 kubectl get pods
 kubectl logs command
 
@@ -31,7 +24,7 @@ Substitua o pod com a nova configuração:
 
     Liste os pods novamente e verifique os logs para validar a saída do comando ps aux.
 
-Exercício 2: Criando uma execução longa com "sleep"
+# Exercício 2: Criando uma execução longa com "sleep"
 
     Crie um pod imperativamente que execute o comando sleep 1d (mantendo o contêiner em execução por 1 dia):
 
@@ -60,7 +53,7 @@ Liste os processos ativos no contêiner:
 
     Explique a diferença entre configurar Command e Args no manifesto para manter o pod executando.
 
-Exercício 3: Explorando a ausência de Command e adicionando via manifesto
+# Exercício 3: Explorando a ausência de Command e adicionando via manifesto
 
     Crie um pod imperativamente sem sobrescrever o ENTRYPOINT da imagem (sem usar --command):
 
