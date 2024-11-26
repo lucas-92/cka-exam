@@ -140,3 +140,25 @@ vim deploy.yaml
 ALTERAR: spec.strategy.type:RollingUpdate & strategy.rollingUpdate.maxSurge: 10% & strategy.rollingUpdate.maxUnavailable: 0 & replicas: 10
 
 k apply -f deploy.yaml
+
+vim deploy.yaml
+
+ALTERAR: env.value: web
+
+k apply -f deploy.yaml
+
+vim deploy.yaml
+
+ALTERAR: rollingUpdate.maxSurge:50% & rollingUpdate.maxUnavailable:50% & env.value: teste
+
+k apply -f deploy.yaml
+
+vim deploy.yaml
+
+ALTERAR rollingUpdate.maxUnavailable:0 & rollingUpdate.maxSurge:100%
+
+rm -rf deploy.yaml
+
+k create deployment nginx --image=nginx --port=80 -o yaml --dry-run=client > deploy.yaml
+
+k run nginx --image=nginx --port=80 --env test=test --dry-run=client -o yaml -- cat /etc/logs >> deploy.yaml
