@@ -108,7 +108,35 @@ k rollout history deployment primeiro-deploy
 k edit deployment primeiro-deploy
 
 (Adicionar um record)ALTERAR "kubernetes.io/change-cause" para: Update de imagem
+
 (Alterar para uma versão)ALTERAR IMAGEM PARA SÓ NGINX
 
 k rollout history deployment primeiro-deploy
 
+STRATÉGIAS DE DEPLOYMENT
+
+vim deploy.yaml
+
+INCLUIR: spec.strategy.type:Recreate
+
+k apply -f deploy.yaml
+
+k get pods
+
+tmux (DIVIDIR O TERMINAL EM 2)
+
+watch -n0 k get pods 
+
+vim deploy.yaml
+
+ALTERAR IMAGEM PARA ALPINE
+
+k apply -f deploy.yaml
+
+É ISSO QUE O RECREATE FAZ,GERA DOWNTIME E TROCA A VERSÃO NA FORÇA BRUTA
+
+vim deploy.yaml
+
+ALTERAR: spec.strategy.type:RollingUpdate & strategy.rollingUpdate.maxSurge: 10% & strategy.rollingUpdate.maxUnavailable: 0 & replicas: 10
+
+k apply -f deploy.yaml
