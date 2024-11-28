@@ -162,3 +162,5 @@ rm -rf deploy.yaml
 k create deployment nginx --image=nginx --port=80 -o yaml --dry-run=client > deploy.yaml
 
 k run nginx --image=nginx --port=80 --env test=test --dry-run=client -o yaml -- cat /etc/logs >> deploy.yaml
+
+Ctrl+v para entrar no Visual/Bloco, Shift+i, posiciona onde quer e aperta ESC 2x
