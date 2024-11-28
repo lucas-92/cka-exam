@@ -1,6 +1,3 @@
-# Recriando a explicação em Markdown para a diferença entre os comandos
-
-markdown_content_diff_commands = """
 # Diferença entre os comandos `k create deployment` e `k run`
 
 ## Comando: `k create deployment nginx --image=nginx --port=80 -o yaml --dry-run=client > deploy.yaml`
