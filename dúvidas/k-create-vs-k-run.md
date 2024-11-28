@@ -48,12 +48,3 @@
 ## Quando usar cada comando:
 - **`k create deployment`:** Use quando configurar uma aplicação que requer gerenciamento contínuo, com réplicas e atualizações automáticas.
 - **`k run`:** Use para criar um único Pod para testes, execução de comandos específicos ou casos pontuais.
-
-"""
-
-# Salvando o conteúdo em um arquivo Markdown
-file_path_diff_commands = "/mnt/data/Diferenca_entre_comandos_k_create_deployment_k_run.md"
-with open(file_path_diff_commands, "w") as file:
-    file.write(markdown_content_diff_commands)
-
-file_path_diff_commands
