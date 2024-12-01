@@ -1,3 +1,12 @@
+Criar um PV, PVC e Montá-lo dentro do pod
+
+Criar PV
+
+Criar PVC
+
+Monstar no POD
+
+
 hostPath - HostPath volume plugin
 vim meupv.yaml
 
