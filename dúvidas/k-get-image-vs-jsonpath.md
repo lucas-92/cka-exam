@@ -1,4 +1,4 @@
-## 7. Diferença entre usar `kubectl get` com `jsonpath` e `kubectl describe` com `grep`
+## Diferença entre usar `kubectl get` com `jsonpath` e `kubectl describe` com `grep`
 
 ### Usando `kubectl get` com `jsonpath`:
 ```bash
