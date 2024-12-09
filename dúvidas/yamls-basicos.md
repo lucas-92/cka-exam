@@ -94,157 +94,89 @@ data:
   user: c3VwZXJhZG1pbg==
   password: bWluaGFzZW5oYXN1cGVyc2VndXJh
 ```
-7. PersistentVolumes (PVs)
-
-Always show details
-
+## 7. PersistentVolumes (PVs)
+```
 apiVersion: v1
-
 kind: PersistentVolume
-
 metadata:
-
   name: nome-do-pv
-
 spec:
-
   capacity:
-
     storage: 10Gi
-
   accessModes:
-
   - ReadWriteOnce
-
   persistentVolumeReclaimPolicy: Retain
-
   hostPath:
-
     path: /data
-
-8. PersistentVolumeClaims (PVCs)
-
-Always show details
-
+```
+## 8. PersistentVolumeClaims (PVCs)
+```
 apiVersion: v1
-
 kind: PersistentVolumeClaim
-
 metadata:
-
   name: nome-do-pvc
-
 spec:
-
   accessModes:
-
   - ReadWriteOnce
-
   resources:
-
     requests:
-
       storage: 5Gi
+```
 
-9. Ingress
-
-Always show details
-
+## 9. Ingress
+```
 apiVersion: networking.k8s.io/v1
-
 kind: Ingress
-
 metadata:
-
   name: nome-do-ingress
-
 spec:
-
   rules:
-
   - host: exemplo.com
-
     http:
-
       paths:
-
       - path: /
-
         pathType: Prefix
-
         backend:
-
           service:
-
             name: nome-do-service
-
             port:
-
               number: 80
-
-10. Jobs
-
-Always show details
-
+```
+## 10. Jobs
+```
 apiVersion: batch/v1
-
 kind: Job
-
 metadata:
-
   name: nome-do-job
-
 spec:
-
   template:
-
     spec:
-
       containers:
-
       - name: job-container
-
         image: busybox
-
         command: ["echo", "Hello World"]
-
       restartPolicy: Never
+```
+## 11. CronJobs
 
-11. CronJobs
-
-Always show details
-
+```
 apiVersion: batch/v1
-
 kind: CronJob
-
 metadata:
-
   name: nome-do-cronjob
-
 spec:
-
   schedule: "*/5 * * * *"
-
   jobTemplate:
-
     spec:
-
       template:
-
         spec:
-
           containers:
-
           - name: cronjob-container
-
             image: busybox
-
             command: ["echo", "Hello Cron"]
-
           restartPolicy: Never
-
-12. HorizontalPodAutoscaler (HPA)
+```
+## 12. HorizontalPodAutoscaler (HPA)
 
 Always show details
 
