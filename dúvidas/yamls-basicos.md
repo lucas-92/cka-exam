@@ -62,63 +62,38 @@ spec:
 ```
 apiVersion: v1
 kind: Service
-
 metadata:
-
   name: nome-do-service
-
 spec:
-
   selector:
-
     app: exemplo
-
   ports:
-
   - protocol: TCP
-
     port: 80
-
     targetPort: 80
-
   type: ClusterIP
+```
 
-5. ConfigMaps
-
-Always show details
-
+## 5. ConfigMaps
+```
 apiVersion: v1
-
 kind: ConfigMap
-
 metadata:
-
   name: nome-do-configmap
-
 data:
-
   chave: valor
-
-6. Secrets
-
-Always show details
-
+```
+## 6. Secrets
+```
 apiVersion: v1
-
 kind: Secret
-
 metadata:
-
   name: nome-da-secret
-
 type: Opaque
-
 data:
-
   user: c3VwZXJhZG1pbg==
-
   password: bWluaGFzZW5oYXN1cGVyc2VndXJh
-
+```
 7. PersistentVolumes (PVs)
 
 Always show details
