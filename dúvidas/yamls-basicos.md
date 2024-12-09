@@ -4,106 +4,63 @@
 
 ## 1. Pods
 
-```yaml
-
+```
 apiVersion: v1
-
 kind: Pod
-
 metadata:
-
   name: nome-do-pod
-
 spec:
-
   containers:
-
   - name: nome-do-container
-
     image: imagem
+```
 
-2. ReplicaSets
+## 2. ReplicaSets
 
-Always show details
-
+```
 apiVersion: apps/v1
-
 kind: ReplicaSet
-
 metadata:
-
   name: nome-do-replicaset
-
 spec:
-
   replicas: 2
-
   selector:
-
     matchLabels:
-
       app: exemplo
-
   template:
-
     metadata:
-
       labels:
-
         app: exemplo
-
     spec:
-
       containers:
-
       - name: app-container
-
         image: nginx
+```
 
-3. Deployments
+## 3. Deployments
 
-Always show details
-
+```
 apiVersion: apps/v1
-
 kind: Deployment
-
 metadata:
-
   name: nome-do-deployment
-
 spec:
-
   replicas: 3
-
   selector:
-
     matchLabels:
-
       app: exemplo
-
   template:
-
     metadata:
-
       labels:
-
         app: exemplo
-
     spec:
-
       containers:
-
       - name: nginx
-
         image: nginx:latest
-
-4. Services
-
-Always show details
-
+```
+## 4. Services
+```
 apiVersion: v1
-
 kind: Service
 
 metadata:
