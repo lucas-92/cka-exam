@@ -1,9 +1,6 @@
 # Lista de Arquivos YAML do Kubernetes
 
-
-
 ## 1. Pods
-
 ```
 apiVersion: v1
 kind: Pod
@@ -16,7 +13,6 @@ spec:
 ```
 
 ## 2. ReplicaSets
-
 ```
 apiVersion: apps/v1
 kind: ReplicaSet
@@ -38,7 +34,6 @@ spec:
 ```
 
 ## 3. Deployments
-
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -58,6 +53,7 @@ spec:
       - name: nginx
         image: nginx:latest
 ```
+
 ## 4. Services
 ```
 apiVersion: v1
@@ -178,64 +174,37 @@ spec:
 ```
 ## 12. HorizontalPodAutoscaler (HPA)
 
-Always show details
-
+```
 apiVersion: autoscaling/v1
-
 kind: HorizontalPodAutoscaler
-
 metadata:
-
   name: nome-do-hpa
-
 spec:
-
   scaleTargetRef:
-
     apiVersion: apps/v1
-
     kind: Deployment
-
     name: nome-do-deployment
-
   minReplicas: 1
-
   maxReplicas: 5
-
   targetCPUUtilizationPercentage: 50
+```
 
-13. NetworkPolicy
-
-Always show details
-
+## 13. NetworkPolicy
+```
 apiVersion: networking.k8s.io/v1
-
 kind: NetworkPolicy
-
 metadata:
-
   name: nome-da-policy
-
 spec:
-
   podSelector:
-
     matchLabels:
-
       role: db
-
   policyTypes:
-
   - Ingress
-
   - Egress
-
   ingress:
-
   - from:
-
     - podSelector:
-
         matchLabels:
-
-          role: frontend
+         role: frontend
+```
