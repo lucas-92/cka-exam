@@ -1,5 +1,5 @@
 
-# Explicação do Manifesto do Pod no Kubernetes usado na questão 38
+# Explicação do Manifesto do Pod no Kubernetes usado na questão 37
 
 Este arquivo descreve um manifesto YAML para criar um **Pod** no Kubernetes. Abaixo está uma análise detalhada de cada seção.
 
