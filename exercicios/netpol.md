@@ -21,5 +21,33 @@ R.: Ingress e Egress. Fluxo de entrada de rede no pod, o Ingress e o fluxo de sa
 
 ## Crie 3 serviços para expor os pods criados use porta 80 e target-port 80.
 
-## Crie uma regra onde somente o pod-a pode acessar o pod-c.
+## Crie uma netpol onde somente o pod-a pode acessar o pod-c.
+
+## Verifique se a netpol está funcionando.
+
+## Adicione o nameSpaceSelector na netpol criada.
+
+## Crie o nameSpace full-access
+
+## Crie 2 pods nesse nameSpace: full-pod-a e full-pod-b
+
+## Acesse o pod-c pelo pod-a
+
+## Acesse o pod-b pelo pod-a
+
+## Acesse o pod-a pelo pod-b
+
+## Tente acessar o pod-a pelo pod-c
+
+## Chame o serviço do pod-a através do pod full-pod-a
+
+## Faça o mesmo com o pod-b
+
+## Tente fazer o mesmo com o pod-c
+
+## Crie a label acesso=liberado para o namespace full-access
+
+## Tente novamente fazer o acesso ao pod-c através do full-pod-a
+
+## Altere a netpol para liberar o tráfico apenas para o pod que possuí a label: run=full-pod-b e tenha a label acesso:liberado.
 
