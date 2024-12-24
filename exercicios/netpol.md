@@ -25,7 +25,7 @@ R.: Ingress e Egress. Fluxo de entrada de rede no pod, o Ingress e o fluxo de sa
 
 ## Verifique se a netpol está funcionando.
 
-## Adicione o nameSpaceSelector na netpol criada.
+## Edite a netpol criada e inclua o nameSpaceSelector.
 
 ## Crie o nameSpace full-access
 
