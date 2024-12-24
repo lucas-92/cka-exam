@@ -15,7 +15,7 @@ R.: podSelector, namespaceSelector e ipBlock
 ## Qual o fluxo de rede que conseguimos fazer e controlar?
 R.: Ingress e Egress. Fluxo de entrada de rede no pod, o Ingress e o fluxo de saída de rede do pod, o Egress
 
-# Exercícios
+# Exercícios 
 
 ## Crie 3 pods: pod-a, pod-b e pod-c. Use a imagem do nginx e a porta 80.
 
@@ -34,6 +34,8 @@ R.: Ingress e Egress. Fluxo de entrada de rede no pod, o Ingress e o fluxo de sa
 ## Acesse o pod-c pelo pod-a
 
 ## Acesse o pod-b pelo pod-a
+
+## Acesse o pod-a pelo pod-a
 
 ## Acesse o pod-a pelo pod-b
 
