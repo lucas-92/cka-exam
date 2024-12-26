@@ -15,7 +15,7 @@ R.: podSelector, namespaceSelector e ipBlock
 ## Qual o fluxo de rede que conseguimos fazer e controlar?
 R.: Ingress e Egress. Fluxo de entrada de rede no pod, o Ingress e o fluxo de saída de rede do pod, o Egress
 
-# Exercícios 
+# Exercícios Ingress
 
 ## Crie 3 pods: pod-a, pod-b e pod-c. Use a imagem do nginx e a porta 80.
 
@@ -52,4 +52,8 @@ R.: Ingress e Egress. Fluxo de entrada de rede no pod, o Ingress e o fluxo de sa
 ## Tente novamente fazer o acesso ao pod-c através do full-pod-a
 
 ## Altere a netpol para liberar o tráfico apenas para o pod que possuí a label: run=full-pod-b e tenha a label acesso:liberado.
+
+## Inclua a regra IpBlock na netpol para que apenas 10.0.0.0/8 esteja liberado
+
+# Exercícios Egress
 
