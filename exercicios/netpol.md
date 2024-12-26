@@ -57,3 +57,10 @@ R.: Ingress e Egress. Fluxo de entrada de rede no pod, o Ingress e o fluxo de sa
 
 # Exercícios Egress
 
+## Crie uma nova netpol para liberar o acesso de rede apenas para do pod c para o pod a usando tcp e porta 80.
+
+## Tente acessar o pod-a pelo pod-c
+
+## Tente acessar o pod-b pelo pod-c
+
+## Acesse o pod-c pelo pod-c
