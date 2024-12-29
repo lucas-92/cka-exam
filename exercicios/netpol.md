@@ -57,10 +57,26 @@ R.: Ingress e Egress. Fluxo de entrada de rede no pod, o Ingress e o fluxo de sa
 
 # Exercícios Egress
 
-## Crie uma nova netpol para liberar o acesso de rede apenas para do pod c para o pod a usando tcp e porta 80.
+## Crie uma nova netpol para liberar a saída do pod-c apenas para o pod-a usando tcp e porta 80.
 
 ## Tente acessar o pod-a pelo pod-c
 
 ## Tente acessar o pod-b pelo pod-c
 
 ## Acesse o pod-c pelo pod-c
+
+## Edite a netpol criada incluindo uma regra para liberar dns, use as portas 53 TCP e UDP (CoreDNS rodando no kube-system) e inclua a regra namespaceSelector 
+
+# Exercícios Allow
+
+## Crie uma netpol para liberar todo tráfego de entrada (Ingress)
+
+## Crie uma netpol para liberar todo tráfego de saída (Egress)
+
+# Exercícios Deny
+
+## Crie uma netpol para bloquear todo o tráfego de saída (Egress)
+
+## Crie uma netpol para bloquear todo o tráfego de entrada (Ingress)
+
+## Crie uma netpol para bloquear todo o tráfego de saída e entrada.
