@@ -12,3 +12,4 @@
 ![image](https://github.com/user-attachments/assets/32516530-a9e4-4fe6-b119-f17bf1c6597e)
 
 
+kubectl config set-context --current --namespace=nome-do-namespace
