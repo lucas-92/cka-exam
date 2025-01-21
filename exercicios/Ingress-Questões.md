@@ -8,3 +8,10 @@ Crie um service cluster ip para o pod criado anteriormente na porta 80.
 
 Crie um yaml de um Ingress para expor o service cluster ip para fora do cluster no navegador. 
 
+Adicione mais uma rota para um novo service cluster ip.
+
+Crie um pod usando httpd na porta 80
+
+Crie um service cluster ip para o pod criado anteriormente.
+
+Crie um default backend.
