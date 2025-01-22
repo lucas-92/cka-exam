@@ -15,3 +15,7 @@ Crie um pod usando httpd na porta 80
 Crie um service cluster ip para o pod criado anteriormente.
 
 Crie um default backend.
+
+Altere o roteamento que foi feito em path para um roteamento de hosts.
+
+Crie uma regra caso não tenha host.
