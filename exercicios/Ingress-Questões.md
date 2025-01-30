@@ -20,6 +20,6 @@ Altere o roteamento que foi feito em path para um roteamento de hosts.
 
 Crie uma regra caso não tenha host.
 
+Crie um ingress através do kubectl
 
-
-22:19 &unit=65b4de45379f34ad950069e9Unit
+&unit=65b4de45379f34ad950069e9Unit
