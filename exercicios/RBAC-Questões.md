@@ -1,11 +1,13 @@
-1. Onde fica definido o método RBAC?
+<details> 
+  <summary>1: Onde fica definido o método RBAC? </summary>
+   A1: No kube-apiserver.yaml, no kind está dentro do node control-plane. O diretório padrão é /etc/kubernetes/manifests/kube-apiserver.yaml
+</details>
+<details> 
+  <summary>2: Onde fica definido o método RBAC? </summary>
+   A1: No kube-apiserver.yaml, no kind está dentro do node control-plane. O diretório padrão é /etc/kubernetes/manifests/kube-apiserver.yaml
+</details>
 
-No kube-apiserver.yaml, no kind está dentro do node control-plane. O diretório padrão é /etc/kubernetes/manifests/kube-apiserver.yaml
-```
-cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep authorization-mode
-    - --authorization-mode=Node,RBAC
 
-```
 &unit=65b4de45379f34ad950069eaUnit
 
 &unit=66858a4fe5948d045f0cf31dUnit
