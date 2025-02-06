@@ -1,10 +1,10 @@
 <details> 
   <summary>1: Onde fica definido o método RBAC? </summary>
-   A1: No kube-apiserver.yaml, no kind está dentro do node control-plane. O diretório padrão é /etc/kubernetes/manifests/kube-apiserver.yaml
+   R: No kube-apiserver.yaml, no kind está dentro do node control-plane. O diretório padrão é /etc/kubernetes/manifests/kube-apiserver.yaml
 </details>
 <details> 
-  <summary>2: Onde fica definido o método RBAC? </summary>
-   A1: No kube-apiserver.yaml, no kind está dentro do node control-plane. O diretório padrão é /etc/kubernetes/manifests/kube-apiserver.yaml
+  <summary>2: Crie uma Role de permissão para ler secrets </summary>
+   R: No kube-apiserver.yaml, no kind está dentro do node control-plane. O diretório padrão é /etc/kubernetes/manifests/kube-apiserver.yaml
 </details>
 
 
